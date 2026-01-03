@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Neón | Promoción KAIZEN 2026</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        /* --- ESTILOS DE LA BURBUJA DE AVISO --- */
+        .aviso-cookies {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 600px;
+            background-color: rgba(10, 10, 10, 0.95);
+            border: 2px solid #0ff;
+            box-shadow: 0 0 20px #0ff;
+            border-radius: 15px;
+            padding: 20px;
+            z-index: 9999;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { bottom: -100px; opacity: 0; }
+            to { bottom: 20px; opacity: 1; }
+        }
+
+        .aviso-texto {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #fff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-leido {
+            background: transparent;
+            color: #ffd700;
+            border: 1px solid #ffd700;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px #ffd700;
+            transition: 0.3s;
+        }
+
+        .btn-leido:hover {
+            background: #ffd700;
+            color: #000;
+            box-shadow: 0 0 20px #ffd700;
+        }
+
+        /* --- RESTO DE ESTILOS --- */
+        .container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 40px;
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            padding-bottom: 100px; 
+        }
+
+        .event-card {
+            background-color: rgba(20, 20, 20, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
+            border: 1px solid rgba(255, 0, 127, 0.3);
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.8);
+        }
+
+        .event-card h2 {
+            font-size: 1.8em;
+            color: #ffd700;
+            text-shadow: 0 0 8px #ffd700;
+        }
+
+        .event-card h3 {
+            color: #00ffbf;
+            text-shadow: 0 0 6px #00ffbf;
+        }
+
+        .event-card p {
+            color: #f0f;
+            text-shadow: 0 0 4px #f0f;
+        }
+
+        .event-card.undefined {
+            box-shadow: 0 0 10px rgba(128, 128, 128, 0.2);
+            border: 1px solid rgba(128, 128, 128, 0.1);
+            opacity: 0.7;
+        }
+
+        .event-card.undefined h2, .event-card.undefined h3, .event-card.undefined p {
+            color: #666;
+            text-shadow: none;
+        }
+
+        .btn-volver {
+            text-decoration: none;
+            color: #fff;
+            border: 2px solid #ff007f;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px #ff007f;
+            display: inline-block;
+        }
+
+        .btn-volver:hover {
+            background-color: #ff007f;
+            color: #000;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="aviso-cookies" id="burbujaAviso">
+        <p class="aviso-texto">
+            ¡Hola! Por el momento son eventos que hay que obtener la autorización de la dirección de la Escuela, son posibles eventos que se realizarán para recaudar fondos para la PROM KAIZEN 2026.
+        </p>
+        <button class="btn-leido" onclick="cerrarAviso()">Ya leí</button>
+    </div>
+
+    <a href="index.html" class="btn-volver">← Volver al Inicio</a>
+
+    <div class="container">
+        <h1>Eventos KAIZEN 2026</h1>
+
+        <div class="events-grid">
+            <div class="event-card">
+                <h2>MAYO 2026</h2>
+                <h3>Zarao temática 90's</h3>
+                <p>¡Prepárense para viajar en el tiempo! Recaudación para nuestra fiesta de gala. POR DIÁLOGAR EN DIRECCIÓN.</p>
+            </div>
+
+            <div class="event-card undefined">
+                <h2>SIN DEFINIR</h2>
+                <h3>Próximamente</h3>
+                <p>Mantente atento. ¡Grandes sorpresas en camino!</p>
+            </div>
+            
+            <div class="event-card undefined">
+                <h2>SIN DEFINIR</h2>
+                <h3>Próximamente</h3>
+                <p>Pronto anunciaremos más detalles.</p>
+            </div>
+
+            <div class="event-card undefined">
+                <h2>SIN DEFINIR</h2>
+                <h3>Próximamente</h3>
+                <p>Nuevos eventos disponibles muy pronto.</p>
+            </div>
+
+            <div class="event-card undefined">
+                <h2>SIN DEFINIR</h2>
+                <h3>Próximamente</h3>
+                <p>¡La diversión continúa! Síguenos.</p>
+            </div>
+
+            <div class="event-card undefined">
+                <h2>SIN DEFINIR</h2>
+                <h3>Próximamente</h3>
+                <p>Más oportunidades para celebrar juntos.</p>
+            </div>
+
+            <div class="event-card undefined">
+                <h2>SIN DEFINIR</h2>
+                <h3>Próximamente</h3>
+                <p>Trabajando en una graduación inolvidable.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function cerrarAviso() {
+            document.getElementById('burbujaAviso').style.display = 'none';
+        }
+    </script>
+
+<footer>
+   <!-- Enlace a Instagram con logo pequeño -->
+  <a href="https://www.instagram.com/kaizen_prom?igsh=aXdsaTQ5djVqOHN0" target="_blank" style="color:white; text-decoration:none; display:inline-flex; align-items:center; gap:8px; margin-top:10px;">
+    <!-- Logo pequeño de Instagram (SVG) -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <defs>
+        <linearGradient id="iggrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f58529"/>
+          <stop offset="30%" stop-color="#dd2a7b"/>
+          <stop offset="60%" stop-color="#8134af"/>
+          <stop offset="100%" stop-color="#515bd4"/>
+        </linearGradient>
+      </defs>
+      <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#iggrad)"/>
+      <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0-2.5c2.761 0 5 2.239 5 5s-2.239 5-5 5-5-2.239-5-5 2.239-5 5-5zm5.25-1.25a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="#fff"/>
+      <rect x="6.5" y="6.5" width="11" height="11" rx="3.5" fill="none" stroke="#fff" stroke-width="1.5"/>
+    </svg>
+    <span>Instagram</span>
+  </a>
+</footer>
+
+</body>
+</html>

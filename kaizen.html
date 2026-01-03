@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Significado del Logo | KAIZEN 2026</title>
+    <style>
+        :root {
+            --oro-neon: #ffcc00;
+            --oro-oscuro: #b8860b;
+            --fondo: #050505;
+            --texto: #ffffff;
+            --brillo: rgba(255, 204, 0, 0.4);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--fondo);
+            color: var(--texto);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* Botón Volver */
+        .btn-volver {
+            text-decoration: none;
+            color: var(--oro-neon);
+            border: 2px solid var(--oro-neon);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px var(--oro-neon);
+            align-self: flex-start;
+        }
+
+        .btn-volver:hover {
+            background-color: var(--oro-neon);
+            color: #000;
+            box-shadow: 0 0 30px var(--oro-neon);
+        }
+
+        /* Contenedor Principal */
+        .main-container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid var(--oro-oscuro);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 25px var(--brillo);
+            text-align: center;
+        }
+
+        /* Logo */
+        .logo-img {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 2px solid var(--oro-neon);
+            box-shadow: 0 0 20px var(--oro-neon);
+        }
+
+        h1 {
+            color: var(--oro-neon);
+            text-shadow: 0 0 10px var(--oro-neon);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .slogan {
+            font-style: italic;
+            color: var(--oro-oscuro);
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        /* Sección de Significado */
+        .info-grid {
+            text-align: left;
+            display: grid;
+            gap: 25px;
+        }
+
+        .info-item {
+            border-left: 4px solid var(--oro-neon);
+            padding-left: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px 20px;
+            border-radius: 0 15px 15px 0;
+            transition: 0.3s;
+        }
+
+        .info-item:hover {
+            background: rgba(255, 204, 0, 0.1);
+            transform: translateX(10px);
+        }
+
+        .info-item strong {
+            color: var(--oro-neon);
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Sección Kaizen */
+        .kaizen-definition {
+            margin-top: 40px;
+            padding: 25px;
+            border: 2px dashed var(--oro-neon);
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .kaizen-definition h2 {
+            color: var(--oro-neon);
+            margin-top: 0;
+        }
+
+        .kaizen-definition p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+    </style>
+    <link href="logo.jpeg" rel="stylesheet">
+</head>
+<body>
+
+    <a href="index.html" class="btn-volver">← Volver al Inicio</a>
+
+    <div class="main-container">
+        <img src="logo.jpeg" alt="Logo Kaizen 2026" class="logo-img">
+
+        <h1>Identidad Visual</h1>
+        <span class="slogan">Promoción Kaizen 2026</span>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <strong>🛡️ El Escudo</strong>
+                Representa protección y fortaleza. En el ámbito pedagógico, simboliza la misión de resguardar y formar a los estudiantes para que enfrenten el futuro con conocimientos sólidos.
+            </div>
+
+            <div class="info-item">
+                <strong>✨ El Dorado</strong>
+                Representa el éxito, excelencia y sabiduría. Transmite la idea de formar personas brillantes, con aspiraciones altas y capaces de alcanzar logros valiosos.
+            </div>
+
+            <div class="info-item">
+                <strong>🐲 Los Dragones</strong>
+                Simbolizan poder, disciplina y superación constante. En la educación representa el esfuerzo y la mejora continua que impulsa a cada estudiante a crecer personal y académicamente.
+            </div>
+
+            <div class="info-item">
+                <strong>👑 La Corona</strong>
+                Hace referencia al liderazgo y al triunfo final. Simboliza la culminación de una etapa académica y el desarrollo de habilidades para liderar en la vida.
+            </div>
+
+            <div class="info-item">
+                <strong>🌿 Los Ornamentos</strong>
+                Referencia a la belleza y el crecimiento. Representan el desarrollo integral del estudiante: académico, humano y artístico.
+            </div>
+        </div>
+
+        <div class="kaizen-definition">
+            <h2>¿Qué significa KAIZEN?</h2>
+            <p>
+                Proviene del japonés y significa <strong>"Mejora Continua"</strong>. 
+                Adaptado al ámbito académico, es nuestra filosofía de: 
+                <em>"Aprender, corregir y crecer día a día para alcanzar la excelencia."</em>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
