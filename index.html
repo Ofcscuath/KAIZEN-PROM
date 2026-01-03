@@ -1,267 +1,258 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, initial-scale=1.0">
-    <title>Kaizen 2026 | Asociación de Graduandos</title>
-    <style>
-        :root {
-            --primario: #00f5ff; /* Azul neón brillante */
-            --secundario: #ff005d; /* Rosa neón intenso */
-            --dorado: #faff00; /* Amarillo neón eléctrico */
-            --blanco: #ffffff;
-            --gris-claro: #0a0a0a; /* Fondo oscuro */
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaizen 2026 | Asociación de Graduandos</title>
+    <style>
+        :root {
+            --primario: #00f5ff; /* Azul neón brillante */
+            --secundario: #ff005d; /* Rosa neón intenso */
+            --dorado: #faff00; /* Amarillo neón eléctrico */
+            --blanco: #ffffff;
+            --gris-claro: #0a0a0a; /* Fondo oscuro */
+        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: var(--blanco);
-            background-color: var(--gris-claro);
-            /* Aseguramos que el cuerpo no se colapse */
-            min-width: 1200px; 
-        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--blanco);
+            background-color: var(--gris-claro);
+        }
 
-        /* Navegación */
-        header {
-            background: var(--primario);
-            color: black;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 0 15px var(--primario);
-            min-width: 1200px;
-            box-sizing: border-box;
-        }
+        /* Navegación */
+        header {
+            background: var(--primario);
+            color: black;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 0 15px var(--primario);
+        }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-            color: var(--dorado);
-            text-shadow: 0 0 10px var(--dorado);
-        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--dorado);
+            text-shadow: 0 0 10px var(--dorado);
+        }
 
-        nav a {
-            color: var(--blanco);
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-            text-shadow: 0 0 8px var(--secundario);
-        }
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            text-shadow: 0 0 8px var(--secundario);
+        }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1523050853021-eb6e1f00b6b5?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--blanco);
-            padding: 0 20px;
-            min-width: 1200px;
-        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1523050853021-eb6e1f00b6b5?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--blanco);
+            padding: 0 20px;
+        }
 
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            color: var(--primario);
-            text-shadow: 0 0 15px var(--primario);
-        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            color: var(--primario);
+            text-shadow: 0 0 15px var(--primario);
+        }
 
-        .hero p {
-            font-size: 1.5rem;
-            max-width: 700px;
-            color: var(--dorado);
-            text-shadow: 0 0 10px var(--dorado);
-        }
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            color: var(--dorado);
+            text-shadow: 0 0 10px var(--dorado);
+        }
 
-        /* Secciones */
-        .container {
-            padding: 4rem 10%;
-            min-width: 1200px;
-            box-sizing: border-box;
-        }
+        /* Secciones */
+        .container {
+            padding: 4rem 10%;
+        }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--secundario);
-            text-shadow: 0 0 12px var(--secundario);
-        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secundario);
+            text-shadow: 0 0 12px var(--secundario);
+        }
 
-        /* Forzamos que la cuadrícula siempre tenga 3 columnas como en PC */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 20px;
-        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-        .card {
-            background: #111;
-            color: var(--blanco);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 15px var(--primario);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+        .card {
+            background: #111;
+            color: var(--blanco);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--primario);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 25px var(--secundario);
-        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px var(--secundario);
+        }
 
-        /* NUEVA SECCIÓN KAIZEN */
-        .kaizen-info {
-            background: rgba(255, 0, 93, 0.05);
-            border: 1px solid var(--secundario);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-top: 4rem;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(255, 0, 93, 0.2);
-        }
+        /* NUEVA SECCIÓN KAIZEN */
+        .kaizen-info {
+            background: rgba(255, 0, 93, 0.05);
+            border: 1px solid var(--secundario);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 4rem;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 0, 93, 0.2);
+        }
 
-        .kaizen-info p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            color: var(--blanco);
-        }
+        .kaizen-info p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: var(--blanco);
+        }
 
-        /* Footer */
-        footer {
-            background: #000;
-            color: var(--blanco);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-            box-shadow: 0 0 15px var(--primario);
-            min-width: 1200px;
-        }
+        /* Footer */
+        footer {
+            background: #000;
+            color: var(--blanco);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 0 15px var(--primario);
+        }
 
-        .cta-button {
-            background: var(--secundario);
-            color: var(--blanco);
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-top: 20px;
-            display: inline-block;
-            box-shadow: 0 0 15px var(--secundario);
-            transition: background 0.3s, box-shadow 0.3s;
-        }
+        .cta-button {
+            background: var(--secundario);
+            color: var(--blanco);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            box-shadow: 0 0 15px var(--secundario);
+            transition: background 0.3s, box-shadow 0.3s;
+        }
 
-        .cta-button:hover {
-            background: var(--dorado);
-            color: #000;
-            box-shadow: 0 0 20px var(--dorado);
-        }
-    </style>
+        .cta-button:hover {
+            background: var(--dorado);
+            color: #000;
+            box-shadow: 0 0 20px var(--dorado);
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">KAIZEN 2026</div>
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#actividades">Actividades</a>
-            <a href="directiva.html">Directiva</a>
-            <a href="https://wa.me/50761803843?text=Hola%20soy%20(nombre%20del%20estudiante)%20del%20(grupo),%20y%20tengo%20esta%20consulta:%20">Contacto</a>
-        </nav>
-    </header>
+    <header>
+        <div class="logo">KAIZEN 2026</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#actividades">Actividades</a>
+            <a href="directiva.html">Directiva</a>
+            <a href="https://wa.me/50761803843?text=Hola%20soy%20(nombre%20del%20estudiante)%20del%20(grupo),%20y%20tengo%20esta%20consulta:%20">Contacto</a>
+        </nav>
+    </header>
 
-    <section class="hero" id="inicio">
-        <h1>Promoción 2026</h1>
-        <p>"Donde las espadas se forjan con el fuego del dragón."</p>
-        <a href="#actividades" class="cta-button">Ver Actividades</a>
-    </section>
+    <section class="hero" id="inicio">
+        <h1>Promoción 2026</h1>
+        <p>"Donde las espadas se forjan con el fuego del dragón."</p>
+        <a href="#actividades" class="cta-button">Ver Actividades</a>
+    </section>
 
-    <main class="container">
-        <h2 class="section-title">Nuestros Pilares</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Unión</h3>
-                <p>Fortalecemos los lazos entre compañeros para crear recuerdos inolvidables antes de nuestra graduación.</p>
-            </div>
-            <div class="card">
-                <h3>Esfuerzo</h3>
-                <p>Dedicación constante en nuestras metas académicas y proyectos de recaudación de fondos.</p>
-            </div>
-            <div class="card">
-                <h3>Legado</h3>
-                <p>Queremos dejar una huella positiva en nuestra institución para las futuras generaciones.</p>
-            </div>
-        </div>
+    <main class="container">
+        <h2 class="section-title">Nuestros Pilares</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Unión</h3>
+                <p>Fortalecemos los lazos entre compañeros para crear recuerdos inolvidables antes de nuestra graduación.</p>
+            </div>
+            <div class="card">
+                <h3>Esfuerzo</h3>
+                <p>Dedicación constante en nuestras metas académicas y proyectos de recaudación de fondos.</p>
+            </div>
+            <div class="card">
+                <h3>Legado</h3>
+                <p>Queremos dejar una huella positiva en nuestra institución para las futuras generaciones.</p>
+            </div>
+        </div>
 
-        <div class="kaizen-info">
-            <h2 class="section-title">¿Qué es Kaizen para nosotros?</h2>
-            <p>
-                Kaizen proviene del japonés que significa mejora continua. Para nuestra promoción, no es solo una palabra, 
-                es el compromiso de siempre superarnos, aprender de cada paso y hacer que nuestra experiencia como 
-                graduandos sea la mejor posible a través del trabajo en equipo y la excelencia.
-            </p>
-            <a href="kaizen.html" class="cta-button">Conocer</a>
-        </div>
+        <div class="kaizen-info">
+            <h2 class="section-title">¿Qué es Kaizen para nosotros?</h2>
+            <p>
+                Kaizen proviene del japonés que significa mejora continua. Para nuestra promoción, no es solo una palabra, 
+                es el compromiso de siempre superarnos, aprender de cada paso y hacer que nuestra experiencia como 
+                graduandos sea la mejor posible a través del trabajo en equipo y la excelencia.
+            </p>
+            <a href="kaizen.html" class="cta-button">Conocer</a>
+        </div>
 
-        <h2 class="section-title" id="actividades" style="margin-top: 5rem;">Próximos Eventos</h2>
-        <div class="grid">
-            <div class="card">
-                <span style="color: var(--secundario); font-weight: bold;">MAYO 2026</span>
-                <h4>Zarao temática 90's</h4>
-                <p>Recaudación de fondos para la fiesta de gala.</p>
-            </div>
-            <div class="card">
-                <span style="color: var(--secundario); font-weight: bold;">SIN DEFINIR</span>
-                <h4>SIN DEFINIR</h4>
-                <p>SIN DEFINIR</p>
-            </div>
-            <div class="card">
-                <span style="color: var(--secundario); font-weight: bold;">SIN DEFINIR</span>
-                <h4>SIN DEFINIR</h4>
-                <p>SIN DEFINIR</p>
-            </div>
-        </div>
+        <h2 class="section-title" id="actividades" style="margin-top: 5rem;">Próximos Eventos</h2>
+        <div class="grid">
+            <div class="card">
+                <span style="color: var(--secundario); font-weight: bold;">MAYO 2026</span>
+                <h4>Zarao temática 90's</h4>
+                <p>Recaudación de fondos para la fiesta de gala.</p>
+            </div>
+            <div class="card">
+                <span style="color: var(--secundario); font-weight: bold;">SIN DEFINIR</span>
+                <h4>SIN DEFINIR</h4>
+                <p>SIN DEFINIR</p>
+            </div>
+            <div class="card">
+                <span style="color: var(--secundario); font-weight: bold;">SIN DEFINIR</span>
+                <h4>SIN DEFINIR</h4>
+                <p>SIN DEFINIR</p>
+            </div>
+        </div>
 
-        <div style="text-align:center; margin-top:20px;">
-            <a href="eventos.html" target="_blank" class="cta-button">Más</a>
-        </div>
-    </main>
+        <div style="text-align:center; margin-top:20px;">
+            <a href="eventos.html" target="_blank" class="cta-button">Más</a>
+        </div>
+    </main>
 
-    <footer>
-        <p>&copy; 2026 Asociación de Graduandos Kaizen. Todos los derechos reservados.</p>
-        <p>Síguenos en nuestras redes sociales</p>
-        <a href="https://www.instagram.com/kaizen_prom?igsh=aXdsaTQ5djVqOHN0" target="_blank" style="color:white; text-decoration:none; display:inline-flex; align-items:center; gap:8px; margin-top:10px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-                <defs>
-                    <linearGradient id="iggrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#f58529"/>
-                        <stop offset="30%" stop-color="#dd2a7b"/>
-                        <stop offset="60%" stop-color="#8134af"/>
-                        <stop offset="100%" stop-color="#515bd4"/>
-                    </linearGradient>
-                </defs>
-                <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#iggrad)"/>
-                <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0-2.5c2.761 0 5 2.239 5 5s-2.239 5-5 5-5-2.239-5-5 2.239-5 5-5zm5.25-1.25a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="#fff"/>
-                <rect x="6.5" y="6.5" width="11" height="11" rx="3.5" fill="none" stroke="#fff" stroke-width="1.5"/>
-            </svg>
-            <span>Instagram</span>
-        </a>
-    </footer>
+    <footer>
+        <p>&copy; 2026 Asociación de Graduandos Kaizen. Todos los derechos reservados.</p>
+        <p>Síguenos en nuestras redes sociales</p>
+        <a href="https://www.instagram.com/kaizen_prom?igsh=aXdsaTQ5djVqOHN0" target="_blank" style="color:white; text-decoration:none; display:inline-flex; align-items:center; gap:8px; margin-top:10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <defs>
+                    <linearGradient id="iggrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#f58529"/>
+                        <stop offset="30%" stop-color="#dd2a7b"/>
+                        <stop offset="60%" stop-color="#8134af"/>
+                        <stop offset="100%" stop-color="#515bd4"/>
+                    </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#iggrad)"/>
+                <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0-2.5c2.761 0 5 2.239 5 5s-2.239 5-5 5-5-2.239-5-5 2.239-5 5-5zm5.25-1.25a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="#fff"/>
+                <rect x="6.5" y="6.5" width="11" height="11" rx="3.5" fill="none" stroke="#fff" stroke-width="1.5"/>
+            </svg>
+            <span>Instagram</span>
+        </a>
+    </footer>
 
 </body>
 </html>
